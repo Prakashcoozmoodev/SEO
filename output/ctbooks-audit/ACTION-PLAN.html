@@ -1,0 +1,227 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Action Plan — ctbooks.co</title>
+<style>
+ body{font-family:Inter,Arial,sans-serif; max-width:860px; margin:32px auto; padding:0 20px; line-height:1.6; color:#0f172a}
+ h2{border-bottom:2px solid #e2e8f0; padding-bottom:6px}
+ table{border-collapse:collapse; width:100%; font-size:13px} th,td{border:1px solid #e2e8f0; padding:7px 8px} th{background:#f8fafc; text-transform:uppercase; font-size:11px; letter-spacing:0.04em}
+ code{background:#f1f5f9; padding:2px 6px; border-radius:4px}
+</style></head><body><h1>Action Plan — ctbooks.co (CTBOOKS)</h1>
+<p><strong>Owner:</strong> Christopher Thomas / Web Admin • <strong>Due:</strong> Rolling (P0 = 7 days, P1 = 14 days, P2 = 30 days)<br />
+<strong>How to use:</strong> Check off items, add Assignee + Done date. Column <em>Impact</em> = SEO impact if fixed (1–10). <em>Effort</em> = hours.</p>
+<h2>P0 — Critical (Unblocks Indexing) — Do This Week</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Issue</th>
+<th>Fix</th>
+<th style="text-align: right;">Impact</th>
+<th style="text-align: right;">Effort</th>
+<th>Assignee</th>
+<th>Done</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P0-1</td>
+<td>Sitemap 500 + robots triple declaration</td>
+<td>Keep <strong>one</strong> SEO plugin (Yoast 25.9), uninstall AIOSEO completely (DB + <code>wp-content/aioseo-*</code>), purge LiteSpeed, re-generate sitemaps, verify 200, clean <code>robots.txt</code> to single <code>Sitemap: https://ctbooks.co/sitemap_index.xml</code>, submit to GSC + Bing.</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1h</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>P0-2</td>
+<td>Homepage is template dump (<code>Lorem ipsum</code>, <code>Vulputate …</code>, 3× <code>John Doe — CEO</code>, typo <code>The Salvation On Equation</code>, duplicate testimonial carousel)</td>
+<td>Delete placeholder Elementor sections, fix H1 to single <code>The Salvation Equation</code>, rewrite hero copy to 80–120 words (value prop + free PDF + Amazon trust), keep <strong>one</strong> testimonial block with 2 real Amazon reviews (link to Amazon).</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">2h</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>P0-3</td>
+<td><code>[products]</code> shortcode literal + dead Woo blocks</td>
+<td>Decide: <strong>Remove WooCommerce</strong> if not selling on-site (recommended) → delete shortcode, replace with static Book card + Amazon CTA + <code>301</code> pages <code>302–306</code> type <code>332</code>. If keep Woo, populate real product + <code>Product</code> schema.</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1h</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>P0-4</td>
+<td>Hash navigation dead ends (<code>#</code> for Shop / Videos / Listen Now)</td>
+<td>Remove sections with no inventory or link to real URLs (<code>/books/</code>, YouTube channel, etc.). No hash links.</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">1h</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>P0-5</td>
+<td>Duplicate title <code>Home - CTBOOKS</code> + empty metas</td>
+<td>Set Yoast title template <code>%%title%% %%sep%% CTBOOKS</code>, write manual metas (see Appendix B in full report). Rewrite H1 hierarchy (1× H1, H2 for sections).</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">30m</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>P0-6</td>
+<td>Elfsight empty widget waste</td>
+<td>Remove <code>elfsight-app-dead9cfd-…</code> from <code>/testimonials/</code> until 10+ real Google reviews exist; self-host testimonials.</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">30m</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exit criteria P0:</strong> <code>curl -I https://ctbooks.co/sitemap_index.xml</code> → 200; <code>curl -I https://ctbooks.co/</code> shows single H1; homepage contains zero <code>Lorem ipsum</code> / <code>John Doe</code>.</p>
+<hr />
+<h2>P1 — High (Content &amp; E-E-A-T) — Next 14 Days</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Issue</th>
+<th>Fix</th>
+<th>Impact</th>
+<th>Effort</th>
+<th>Done</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1-1</td>
+<td>Author bio 2 sentences, no E-E-A-T, author = <code>greenjoyful@yahoo.com</code></td>
+<td>Rewrite <code>/biography/</code> 500–700w with credentials, photo, Amazon Author Central <code>sameAs</code>, add <code>Person</code> schema (JSON-LD in report §4). Change WP user Display Name to <code>Christopher Thomas</code>, set professional email.</td>
+<td>9</td>
+<td>3h</td>
+<td></td>
+</tr>
+<tr>
+<td>P1-2</td>
+<td>10 thin posts on same day <code>2025-09-15</code> (≈300w, 1 min, <code>Uncategorized</code>, keyword <code>Christian eBook</code> cannibalization)</td>
+<td><strong>Consolidate:</strong> Merge 4 <code>Christian eBook</code> thin posts → one pillar <code>/christian-ebook-guide/</code> (1,800w). 301 redirect thin URLs. Keep 2–3 distinct Christopher-book posts but expand to 1,200w, new categories (<code>Bible Study</code>, <code>Salvation</code>), add tags, FAQs, interlinks.</td>
+<td>10</td>
+<td>2–3 days</td>
+<td></td>
+</tr>
+<tr>
+<td>P1-3</td>
+<td>No Book / FAQ schema → no rich results</td>
+<td>Add Book + Product + AggregateRating JSON-LD (report §4) + FAQPage for homepage (“What is the Salvation Equation?” etc.). Validate in Rich Results Test.</td>
+<td>8</td>
+<td>2h</td>
+<td></td>
+</tr>
+<tr>
+<td>P1-4</td>
+<td>Images oversized, alt irrelevant, placeholder.png</td>
+<td>Recompress/rename covers (<code>the-salvation-equation-front-cover-…</code>), enable LiteSpeed WebP, add keyword-aware alts, set LCP <code>fetchpriority=high</code>, add OG image 1200×630.</td>
+<td>7</td>
+<td>2h</td>
+<td></td>
+</tr>
+<tr>
+<td>P1-5</td>
+<td>No AI citability (<code>llms.txt</code>, FAQ)</td>
+<td>Create <code>/llms.txt</code> (template in §8), add homepage FAQ block + speakable. Explicitly <code>Allow: GPTBot, CCBot</code> in robots.</td>
+<td>6</td>
+<td>1h</td>
+<td></td>
+</tr>
+<tr>
+<td>P1-6</td>
+<td><code>Theological Schola</code> typo + duplicate quotes</td>
+<td>Fix → <code>Theological Scholar</code>, de-dupe testimonials to 1 block, cite source (Amazon).</td>
+<td>5</td>
+<td>30m</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>P2 — Medium (Performance, Trust, Authority) — 30 Days</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Issue</th>
+<th>Fix</th>
+<th>Impact</th>
+<th>Effort</th>
+<th>Done</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P2-1</td>
+<td>Heavy stack (Elementor + ElementsKit + Templately + ZipWP + 2 SEO plugins) → poor CWV</td>
+<td>LiteSpeed tune (defer JS, preconnect <code>fonts.gstatic.com</code>, critical CSS, exclude LCP from lazy), audit plugins → remove unused (<code>templately/v1</code>, <code>zipwp/v1</code>, <code>hostinger-easy-onboarding</code>, amplitude).</td>
+<td>7</td>
+<td>3h</td>
+<td></td>
+</tr>
+<tr>
+<td>P2-2</td>
+<td>No analytics / GSC / consent</td>
+<td>Install GA4 (with <code>generate_lead</code> on PDF click), connect GSC + Bing, add cookie consent (Hostinger Cookie banner or Complianz), create <code>/privacy-policy/</code> (currently missing?) link in footer + newsletter.</td>
+<td>8</td>
+<td>2h</td>
+<td></td>
+</tr>
+<tr>
+<td>P2-3</td>
+<td>Low authority (3 indexed URLs, 1 Hashnode mention)</td>
+<td>Create Goodreads + Amazon Author Central + YouTube trailers, pitch 2 guest posts (GotQuestions, Christian blog), add <code>rel=me</code> sameAs.</td>
+<td>7</td>
+<td>1 week outreach</td>
+<td></td>
+</tr>
+<tr>
+<td>P2-4</td>
+<td>Newsletter no GDPR</td>
+<td>Replace raw link with Fluent Forms + double opt-in, add <code>I agree to privacy policy</code> checkbox, store consent, add success redirect.</td>
+<td>6</td>
+<td>2h</td>
+<td></td>
+</tr>
+<tr>
+<td>P2-5</td>
+<td>REST author enumeration + email leak</td>
+<td>Disable enumeration (<code>functions.php</code> filter), change author slug, hide <code>greenjoyful@yahoo.com</code>, enable 2FA.</td>
+<td>5</td>
+<td>1h</td>
+<td></td>
+</tr>
+<tr>
+<td>P2-6</td>
+<td>PDF direct link no tracking</td>
+<td>Gated PDF via email or at least UTM <code>?utm_source=ctbooks&amp;utm_medium=pdf</code> + GA4 event, add affiliate disclosure if Amazon affiliate.</td>
+<td>5</td>
+<td>1h</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>P3 — Low (Backlog)</h2>
+<ul>
+<li>Add visible breadcrumbs (Astra), <code>HowTo</code> schema for “How to study the Bible with the book”, <code>Speakable</code>, image sitemap after sitemap fixed.</li>
+<li>Decide <code>/biography/</code> vs <code>/about/</code> → keep one, 301 the other.</li>
+<li>Security headers: <code>HSTS</code>, <code>X-Content-Type-Options</code>, <code>CSP</code> via Hostinger/Cloudflare.</li>
+<li>CDN: Enable Cloudflare free → cache static, early hints.</li>
+<li>Create <code>/sitemap/</code> HTML sitemap for users.</li>
+</ul>
+<hr />
+<h2>Weekly Review Cadence</h2>
+<ul>
+<li><strong>Week 1:</strong> Verify sitemap 200, titles fixed, placeholders removed → submit GSC → log “P0 complete” in <code>.seo-cache/</code>.</li>
+<li><strong>Week 2:</strong> Publish new biography + pillar guide, add schemas → validate Rich Results.</li>
+<li><strong>Week 4:</strong> Run PageSpeed + GSC Coverage → compare indexed count (<code>site:ctbooks.co</code>) should be ≥12. Re-run audit <code>drift_compare.py</code>.</li>
+</ul>
+<p><strong>KPI targets (60 days post-P0+P1):</strong> Indexed URLs 12+, Impressions +60–120%, Avg. position for <code>The Salvation Equation</code> top 10, LCP ≤2.5s, 0 sitemap errors, 0 hash links.</p>
+<hr />
+<p><em>Full evidence, CWV estimates, and JSON-LD snippets in <code>FULL-AUDIT-REPORT.md</code> Appendix A–C.</em></p><p style="font-size:11px;color:#64748b">Generated 2026-09-19 — ctbooks.co — Codex SEO</p></body></html>
